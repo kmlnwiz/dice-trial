@@ -16,7 +16,7 @@ function calc() {
     let num = options.selectedIndex;
     let type_calc = options.options[num].value;
 
-    console.log(type_calc);
+    //console.log(type_calc);
 
     var contentBlock = document.getElementById('data_table');
     contentBlock.innerHTML = ``;
@@ -38,12 +38,13 @@ function calc() {
             conditions = total <= aim_sum;
         }
 
-        console.log(conditions)
+        //console.log(conditions)
 
         if (conditions) {
             aim_over_times += 1;
         };
-        console.log(dice_combination, `合計：${total}`);
+
+        //console.log(dice_combination, `合計：${total}`);
 
         if (i < 300) {
             if (conditions) {
@@ -68,12 +69,12 @@ function calc() {
 
     probability = Math.floor((aim_over_times / play_times) * 10000) / 100;
 
-    console.log(`${conditions.toString()}`, `${play_times}回中${aim_over_times}回`, `約${probability.toFixed(2)}%`);
+    //console.log(`${conditions.toString()}`, `${play_times}回中${aim_over_times}回`, `約${probability.toFixed(2)}%`);
 
-    var result = document.getElementById('result-1');
-    result.innerHTML = `<h4 class="alert-heading result-1">試行結果　( ${play_times} 回)</h4>`;
+    var result1 = document.getElementById('result-1');
+    result1.innerHTML = `<h4 class="alert-heading result-1">試行結果　( ${play_times} 回)</h4>`;
 
-    var result = document.getElementById('result-2');
-    result.innerHTML = `<p class="mb-0 result-2">${aim_over_times} / ${play_times} 回　(約 ${probability.toFixed(2)} %)</p>`;
+    var result2 = document.getElementById('result-2');
+    result2.innerHTML = `<p class="mb-0 result-2">${aim_over_times} / ${play_times} 回　(約 ${probability.toFixed(2)} %)</p>`;
 
 };
