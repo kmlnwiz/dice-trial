@@ -1,13 +1,15 @@
 function calc() {
     //変数
+    var dice_min_value = document.getElementById("dice_min_value");
+    dice_min_value = parseInt(dice_min_value.value);
     var dice_max_value = document.getElementById("dice_max_value");
-    dice_max_value = dice_max_value.value;
+    dice_max_value = parseInt(dice_max_value.value);
     var dice_play_times = document.getElementById("dice_play_times");
-    dice_play_times = dice_play_times.value;
+    dice_play_times = parseInt(dice_play_times.value);
     var play_times = document.getElementById("play_times");
-    play_times = play_times.value;
+    play_times = parseInt(play_times.value);
     var aim_sum = document.getElementById("aim_sum");
-    aim_sum = aim_sum.value;
+    aim_sum = parseInt(aim_sum.value);
 
     let aim_over_times = 0;
     let probability = 0;
@@ -25,7 +27,7 @@ function calc() {
         let dice_combination = [];
 
         for (let j = 0; j < dice_play_times; j++) {
-            dice_combination.push(Math.floor(Math.random() * dice_max_value) + 1);
+            dice_combination.push(Math.floor(Math.random() * (dice_max_value - dice_min_value + 1)) + dice_min_value);
         };
 
         let total = dice_combination.reduce((sum, element) => sum + element, 0);

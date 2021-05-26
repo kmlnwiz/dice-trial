@@ -21,20 +21,22 @@
         <div class="col-md-6">
             <form name="form">
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">サイコロの目の最大値</span>
-                    <input type="text" class="form-control" id="dice_max_value" placeholder="必須" aria-label="必須" aria-describedby="basic-addon1" type="number" value="6">
+                    <span class="input-group-text" id="basic-addon1">目の最小値</span>
+                    <input type="number" class="form-control" id="dice_min_value" placeholder="必須" aria-label="必須" aria-describedby="basic-addon1" type="number" value="1">
+                    <span class="input-group-text" id="basic-addon1">目の最大値</span>
+                    <input type="number" class="form-control" id="dice_max_value" placeholder="必須" aria-label="必須" aria-describedby="basic-addon1" type="number" value="6">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">一度に振るサイコロの数</span>
-                    <input type="text" class="form-control" id="dice_play_times" placeholder="必須" aria-label="必須" aria-describedby="basic-addon1" type="number" value="2">
+                    <input type="number" class="form-control" id="dice_play_times" placeholder="必須" aria-label="必須" aria-describedby="basic-addon1" type="number" value="2" min="1">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">サイコロを振る回数</span>
-                    <input type="text" class="form-control" id="play_times" placeholder="必須" aria-label="必須" aria-describedby="basic-addon1" type="number" value="10">
+                    <input type="number" class="form-control" id="play_times" placeholder="必須" aria-label="必須" aria-describedby="basic-addon1" type="number" value="10" min="1">
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">目標値</span>
-                    <input type="text" class="form-control" id="aim_sum" placeholder="必須" aria-label="必須" aria-describedby="basic-addon1" type="number" value="7">
+                    <span class="input-group-text" id="basic-addon1">閾値</span>
+                    <input type="number" class="form-control" id="aim_sum" placeholder="必須" aria-label="必須" aria-describedby="basic-addon1" type="number" value="7">
                     <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="type_calc">
                         <option value="1" selected>以上</option>
                         <option value="2">一致</option>
