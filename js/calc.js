@@ -72,7 +72,7 @@ function calc() {
     //console.log(`${conditions.toString()}`, `${play_times}回中${aim_over_times}回`, `約${probability.toFixed(2)}%`);
 
     var result1 = document.getElementById('result-1');
-    result1.innerHTML = `<h4 class="alert-heading result-1">試行結果　( ${play_times} 回)</h4>`;
+    result1.innerHTML = `<h4 class="alert-heading result-1">試行結果　(${play_times} 回)</h4>`;
 
     var result2 = document.getElementById('result-2');
     result2.innerHTML = `<p class="mb-0 result-2">${aim_over_times} / ${play_times} 回　(約 ${probability.toFixed(2)} %)</p>`;
