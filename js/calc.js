@@ -53,20 +53,15 @@ function calc() {
 
         if (i < 100) {
             if (conditions) {
-                var data = `<tr>
-      <th scope="col">${i + 1}</th>
-      <th scope="col">${dice_combination}</th>
-      <th scope="col">${total}</th>
-      <th scope="col">${conditions ? true : false}</th>
-    </tr>`;
+                var data = `<tr>`;
             } else {
-                var data = `<tr class="table-secondary">
-      <th scope="col">${i + 1}</th>
-      <th scope="col">${dice_combination}</th>
+                var data = `<tr class="table-secondary">`;
+            };
+            data += `<th scope="col">${i + 1}</th>
+      <th scope="col">(${dice_combination})</th>
       <th scope="col">${total}</th>
       <th scope="col">${conditions ? true : false}</th>
     </tr>`;
-            };
             var contentBlock = document.getElementById('data_table');
             contentBlock.insertAdjacentHTML('beforeend', data);
         };
